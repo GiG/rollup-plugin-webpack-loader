@@ -1,8 +1,7 @@
 import { createProxy } from './util/proxy';
 import { AsyncSeriesHook } from 'tapable';
-import webpack = require('webpack');
+import * as webpack from 'webpack';
 
-const something: webpack.compilation.Compilation = '' as any;
 export class Compiler {
     hooks = createProxy('Hooks', {
         /** @type {AsyncSeriesHook<Compilation>} */
